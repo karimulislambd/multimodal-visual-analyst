@@ -13,7 +13,7 @@ Powered by a **vision-language model** (Llama 4 Scout on Groq). Unlike a generic
 structured report — description, objects, on-image text, colors, and key insights — the
 kind of output real document/image-understanding products are built on.
 
-**Live demo:** _add your Streamlit URL here_
+**Live demo:** https://multimodal-visual-analyst-karimulislambd.streamlit.app/
 
 ---
 
