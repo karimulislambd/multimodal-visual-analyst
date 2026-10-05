@@ -49,7 +49,12 @@ def ask(
         "model": config.VISION_MODEL,
         "messages": messages,
         "temperature": config.TEMPERATURE if temperature is None else temperature,
+        # Groq's free tier caps Qwen output at 1,000 tokens/min, so stay under it.
+        "max_tokens": config.MAX_TOKENS,
     }
+    if config.VISION_MODEL.startswith("qwen/"):
+        # Skip Qwen's thinking step: faster, and keeps the reply clean for JSON mode.
+        kwargs["extra_body"] = {"reasoning_effort": "none"}
     if json_mode:
         kwargs["response_format"] = {"type": "json_object"}
     resp = client().chat.completions.create(**kwargs)

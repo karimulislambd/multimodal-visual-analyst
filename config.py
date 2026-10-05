@@ -9,9 +9,10 @@ load_dotenv()
 
 GROQ_API_KEY: str = os.getenv("GROQ_API_KEY", "")
 
-# Llama 4 Scout is multimodal (text + vision) and free on Groq.
-VISION_MODEL: str = os.getenv("VISION_MODEL", "meta-llama/llama-4-scout-17b-16e-instruct")
+# Qwen 3.8 is multimodal (text + vision) and free on Groq.
+VISION_MODEL: str = os.getenv("VISION_MODEL", "qwen/qwen3.8-27b")
 TEMPERATURE: float = float(os.getenv("TEMPERATURE", "0.2"))
+MAX_TOKENS: int = int(os.getenv("MAX_TOKENS", "900"))
 
 # Guardrails for uploads (Groq caps base64 images at ~4 MB).
 MAX_IMAGE_MB: int = 4

@@ -8,7 +8,7 @@
 > Upload any image and either **ask questions about it** in natural language or run a
 > one-click **structured analysis** that turns the picture into clean, machine-readable JSON.
 
-Powered by a **vision-language model** (Llama 4 Scout on Groq). Unlike a generic
+Powered by a **vision-language model** (Qwen 3.8 on Groq). Unlike a generic
 "chat with an image" toy, this app also does **Visual Intelligence**: it extracts a
 structured report — description, objects, on-image text, colors, and key insights — the
 kind of output real document/image-understanding products are built on.
@@ -38,7 +38,7 @@ kind of output real document/image-understanding products are built on.
 
 ```
                  ┌───────────────────────────────────────────┐
- image + text ─► │  Vision-Language Model (Llama 4 Scout)     │
+ image + text ─► │  Vision-Language Model (Qwen 3.8)     │
                  │    ├─ Ask mode      → grounded visual Q&A  │
                  │    └─ Analyze mode  → strict JSON report   │
                  └───────────────────────────────────────────┘
@@ -46,7 +46,7 @@ kind of output real document/image-understanding products are built on.
 
 ## Tech stack
 
-- **Model:** Groq `llama-4-scout` (multimodal) — free tier
+- **Model:** Groq `qwen/qwen3.8-27b` (multimodal) — free tier
 - **UI:** Streamlit
 - **Images:** Pillow (validation), base64 data URLs
 - **Quality:** pytest · ruff · GitHub Actions · Docker

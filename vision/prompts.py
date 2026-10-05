@@ -19,5 +19,7 @@ STRICT JSON object with exactly these keys:
 
 Rules:
 - Only include what is actually visible. Use empty arrays when nothing applies.
-- text_in_image must be verbatim; do not invent text.
+- text_in_image must be verbatim; do not invent text. List at most 12 entries; for \
+text-heavy images (documents, screenshots) give only headings and the most important lines.
+- Keep every other list to at most 8 short items.
 - Output ONLY the JSON object, no markdown fences, no commentary."""
